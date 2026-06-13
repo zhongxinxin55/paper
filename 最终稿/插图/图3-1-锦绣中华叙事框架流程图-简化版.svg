@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600">
+  <defs>
+    <style>
+      .title{font:700 40px 'Noto Sans CJK SC','Microsoft YaHei','SimSun',sans-serif;fill:#111;text-anchor:middle}
+      .head{font:700 30px 'Noto Sans CJK SC','Microsoft YaHei','SimSun',sans-serif;fill:#111;text-anchor:middle}
+      .text{font:26px 'Noto Sans CJK SC','Microsoft YaHei','SimSun',sans-serif;fill:#111;text-anchor:middle}
+      .small{font:23px 'Noto Sans CJK SC','Microsoft YaHei','SimSun',sans-serif;fill:#111;text-anchor:middle}
+      .note{font:20px 'Noto Sans CJK SC','Microsoft YaHei','SimSun',sans-serif;fill:#444;text-anchor:middle}
+      .box{fill:#fff;stroke:#111;stroke-width:3}
+      .soft{fill:#f7f7f7;stroke:#111;stroke-width:3}
+      .group{fill:none;stroke:#777;stroke-width:2.5;stroke-dasharray:12 10}
+      .arrow{fill:none;stroke:#111;stroke-width:3;marker-end:url(#a)}
+    </style>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#111"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="1600" fill="#fff"/>
+  <text x="600" y="70" class="title">“锦绣中华”叙事框架流程图</text>
+
+  <rect x="250" y="130" width="700" height="110" rx="8" class="box"/>
+  <text x="600" y="178" class="head">资料基础</text>
+  <text x="600" y="218" class="small">民族学、文化地理、民居、饮食与乐器资料</text>
+
+  <line x1="600" y1="240" x2="600" y2="295" class="arrow"/>
+  <rect x="350" y="310" width="500" height="90" rx="8" class="soft"/>
+  <text x="600" y="365" class="head">核心对象：中国五十六民族</text>
+
+  <line x1="600" y1="400" x2="600" y2="455" class="arrow"/>
+  <rect x="290" y="470" width="620" height="90" rx="8" class="box"/>
+  <text x="600" y="525" class="head">民族—文化维度—视觉主题</text>
+
+  <line x1="600" y1="560" x2="600" y2="620" class="arrow"/>
+  <rect x="70" y="635" width="1060" height="410" rx="10" class="group"/>
+  <text x="600" y="680" class="head">五个并列文化维度</text>
+
+  <rect x="105" y="740" width="180" height="190" rx="8" class="soft"/>
+  <text x="195" y="800" class="head">地缘志</text>
+  <text x="195" y="850" class="small"><tspan x="195">人口分布</tspan><tspan x="195" dy="34">地形气候</tspan><tspan x="195" dy="34">生态环境</tspan></text>
+
+  <rect x="310" y="740" width="180" height="190" rx="8" class="soft"/>
+  <text x="400" y="800" class="head">语脉志</text>
+  <text x="400" y="850" class="small"><tspan x="400">语系语族</tspan><tspan x="400" dy="34">方言地区</tspan><tspan x="400" dy="34">文字系统</tspan></text>
+
+  <rect x="515" y="740" width="180" height="190" rx="8" class="soft"/>
+  <text x="605" y="800" class="head">膳食志</text>
+  <text x="605" y="850" class="small"><tspan x="605">主食食材</tspan><tspan x="605" dy="34">风味菜肴</tspan><tspan x="605" dy="34">饮食禁忌</tspan></text>
+
+  <rect x="720" y="740" width="180" height="190" rx="8" class="soft"/>
+  <text x="810" y="800" class="head">构筑志</text>
+  <text x="810" y="850" class="small"><tspan x="810">典型民居</tspan><tspan x="810" dy="34">结构材质</tspan><tspan x="810" dy="34">功能特征</tspan></text>
+
+  <rect x="925" y="740" width="180" height="190" rx="8" class="soft"/>
+  <text x="1015" y="800" class="head">声律志</text>
+  <text x="1015" y="850" class="small"><tspan x="1015">乐器分类</tspan><tspan x="1015" dy="34">材质地区</tspan><tspan x="1015" dy="34">使用场景</tspan></text>
+
+  <line x1="195" y1="930" x2="195" y2="1080" class="arrow"/>
+  <line x1="400" y1="930" x2="400" y2="1080" class="arrow"/>
+  <line x1="605" y1="930" x2="605" y2="1080" class="arrow"/>
+  <line x1="810" y1="930" x2="810" y2="1080" class="arrow"/>
+  <line x1="1015" y1="930" x2="1015" y2="1080" class="arrow"/>
+
+  <rect x="190" y="1095" width="820" height="120" rx="8" class="box"/>
+  <text x="600" y="1142" class="head">视觉转化</text>
+  <text x="600" y="1183" class="small">地图、树状图、比例图、分类图谱与环形图</text>
+
+  <line x1="600" y1="1215" x2="600" y2="1275" class="arrow"/>
+  <rect x="260" y="1290" width="680" height="110" rx="8" class="soft"/>
+  <text x="600" y="1338" class="head">统一视觉系统</text>
+  <text x="600" y="1380" class="small">字体、色彩、版式与图形语言保持一致</text>
+
+  <line x1="600" y1="1400" x2="600" y2="1450" class="arrow"/>
+  <rect x="260" y="1465" width="680" height="80" rx="8" class="box"/>
+  <text x="600" y="1515" class="head">形成五张系列信息图</text>
+
+  <text x="600" y="1580" class="note">来源：作者根据论文内容整理</text>
+</svg>
