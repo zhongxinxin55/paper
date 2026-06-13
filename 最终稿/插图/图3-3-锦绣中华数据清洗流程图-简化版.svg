@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600">
+  <defs>
+    <style>
+      .title{font:700 40px 'Noto Sans CJK SC','Microsoft YaHei','SimSun',sans-serif;fill:#111;text-anchor:middle}
+      .head{font:700 30px 'Noto Sans CJK SC','Microsoft YaHei','SimSun',sans-serif;fill:#111;text-anchor:middle}
+      .text{font:26px 'Noto Sans CJK SC','Microsoft YaHei','SimSun',sans-serif;fill:#111;text-anchor:middle}
+      .small{font:23px 'Noto Sans CJK SC','Microsoft YaHei','SimSun',sans-serif;fill:#111;text-anchor:middle}
+      .note{font:20px 'Noto Sans CJK SC','Microsoft YaHei','SimSun',sans-serif;fill:#444;text-anchor:middle}
+      .box{fill:#fff;stroke:#111;stroke-width:3}
+      .soft{fill:#f7f7f7;stroke:#111;stroke-width:3}
+      .group{fill:none;stroke:#777;stroke-width:2.5;stroke-dasharray:12 10}
+      .arrow{fill:none;stroke:#111;stroke-width:3;marker-end:url(#a)}
+    </style>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#111"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="1600" fill="#fff"/>
+  <text x="600" y="70" class="title">“锦绣中华”数据清洗流程图</text>
+
+  <rect x="250" y="130" width="700" height="110" rx="8" class="box"/>
+  <text x="600" y="178" class="head">原始资料</text>
+  <text x="600" y="218" class="small">PDF文献、文本资料与初步表格</text>
+
+  <line x1="600" y1="240" x2="600" y2="300" class="arrow"/>
+  <rect x="260" y="315" width="680" height="110" rx="8" class="soft"/>
+  <text x="600" y="363" class="head">问题识别</text>
+  <text x="600" y="405" class="small">重复、缺失、名称不统一、字段混杂</text>
+
+  <line x1="600" y1="425" x2="600" y2="485" class="arrow"/>
+  <rect x="110" y="500" width="980" height="330" rx="10" class="group"/>
+  <text x="600" y="550" class="head">通用清洗</text>
+
+  <rect x="150" y="610" width="260" height="130" rx="8" class="soft"/>
+  <text x="280" y="660" class="small"><tspan x="280">删除重复与</tspan><tspan x="280" dy="36">无效信息</tspan></text>
+
+  <rect x="470" y="610" width="260" height="130" rx="8" class="soft"/>
+  <text x="600" y="660" class="small"><tspan x="600">统一民族ID</tspan><tspan x="600" dy="36">与民族名称</tspan></text>
+
+  <rect x="790" y="610" width="260" height="130" rx="8" class="soft"/>
+  <text x="920" y="660" class="small"><tspan x="920">统一字段名称</tspan><tspan x="920" dy="36">与分类方式</tspan></text>
+
+  <rect x="310" y="760" width="260" height="50" rx="8" class="box"/>
+  <text x="440" y="793" class="small">拆分复合字段</text>
+
+  <rect x="630" y="760" width="260" height="50" rx="8" class="box"/>
+  <text x="760" y="793" class="small">保留真实缺失</text>
+
+  <line x1="600" y1="830" x2="600" y2="890" class="arrow"/>
+  <rect x="80" y="905" width="1040" height="300" rx="10" class="group"/>
+  <text x="600" y="955" class="head">五类数据分别校正</text>
+
+  <rect x="110" y="1020" width="180" height="110" rx="8" class="soft"/>
+  <text x="200" y="1068" class="head">地理</text>
+  <text x="200" y="1110" class="small">地区与环境</text>
+
+  <rect x="310" y="1020" width="180" height="110" rx="8" class="soft"/>
+  <text x="400" y="1068" class="head">语言</text>
+  <text x="400" y="1110" class="small">语系与方言</text>
+
+  <rect x="510" y="1020" width="180" height="110" rx="8" class="soft"/>
+  <text x="600" y="1068" class="head">饮食</text>
+  <text x="600" y="1110" class="small">食材与风味</text>
+
+  <rect x="710" y="1020" width="180" height="110" rx="8" class="soft"/>
+  <text x="800" y="1068" class="head">建筑</text>
+  <text x="800" y="1110" class="small">结构与材质</text>
+
+  <rect x="910" y="1020" width="180" height="110" rx="8" class="soft"/>
+  <text x="1000" y="1068" class="head">乐器</text>
+  <text x="1000" y="1110" class="small">分类与场景</text>
+
+  <line x1="600" y1="1205" x2="600" y2="1265" class="arrow"/>
+  <rect x="280" y="1280" width="640" height="100" rx="8" class="box"/>
+  <text x="600" y="1322" class="head">整体校验</text>
+  <text x="600" y="1363" class="small">检查缺失、重复、列名和跨表对应</text>
+
+  <line x1="600" y1="1380" x2="600" y2="1435" class="arrow"/>
+  <rect x="250" y="1450" width="700" height="80" rx="8" class="soft"/>
+  <text x="600" y="1502" class="head">形成五个清洗后数据集</text>
+
+  <text x="600" y="1580" class="note">来源：作者根据论文数据清洗过程整理</text>
+</svg>
