@@ -1,0 +1,12 @@
+name: Build Word
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'word_revision/**'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo building
