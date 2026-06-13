@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1700" viewBox="0 0 1200 1700">
+  <defs>
+    <style>
+      .title{font:700 42px 'Noto Sans CJK SC','Microsoft YaHei','SimSun',sans-serif;fill:#111;text-anchor:middle}
+      .head{font:700 30px 'Noto Sans CJK SC','Microsoft YaHei','SimSun',sans-serif;fill:#111;text-anchor:middle}
+      .text{font:25px 'Noto Sans CJK SC','Microsoft YaHei','SimSun',sans-serif;fill:#111;text-anchor:middle}
+      .small{font:22px 'Noto Sans CJK SC','Microsoft YaHei','SimSun',sans-serif;fill:#111;text-anchor:middle}
+      .note{font:20px 'Noto Sans CJK SC','Microsoft YaHei','SimSun',sans-serif;fill:#444;text-anchor:middle}
+      .box{fill:#fff;stroke:#111;stroke-width:3}
+      .soft{fill:#f7f7f7;stroke:#111;stroke-width:3}
+      .guide{fill:none;stroke:#888;stroke-width:2;stroke-dasharray:10 8}
+      .arrow{fill:none;stroke:#111;stroke-width:3;marker-end:url(#a)}
+    </style>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#111"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="1700" fill="#fff"/>
+  <text x="600" y="70" class="title">“锦绣中华”系列信息图版式结构示意图</text>
+
+  <!-- A3 portrait frame -->
+  <rect x="250" y="150" width="700" height="990" rx="8" class="box"/>
+  <rect x="290" y="190" width="620" height="910" rx="5" class="guide"/>
+
+  <!-- title area -->
+  <rect x="310" y="215" width="580" height="135" rx="6" class="soft"/>
+  <text x="600" y="268" class="head">标题区</text>
+  <text x="600" y="315" class="small">系列名称＋分主题名称</text>
+
+  <!-- lead area -->
+  <rect x="310" y="375" width="580" height="90" rx="6" class="box"/>
+  <text x="600" y="430" class="text">导读区：主题说明或核心信息</text>
+
+  <!-- left auxiliary -->
+  <rect x="310" y="500" width="150" height="200" rx="6" class="soft"/>
+  <text x="385" y="570" class="text"><tspan x="385">辅助信息</tspan><tspan x="385" dy="38">图例／分类</tspan><tspan x="385" dy="38">数据说明</tspan></text>
+
+  <rect x="310" y="725" width="150" height="210" rx="6" class="soft"/>
+  <text x="385" y="800" class="text"><tspan x="385">辅助信息</tspan><tspan x="385" dy="38">文字补充</tspan><tspan x="385" dy="38">局部图表</tspan></text>
+
+  <!-- main visual -->
+  <rect x="485" y="500" width="230" height="435" rx="8" class="box"/>
+  <text x="600" y="665" class="head"><tspan x="600">主体区</tspan><tspan x="600" dy="52">核心地图／树状图</tspan><tspan x="600" dy="44">分类图谱／环形图</tspan><tspan x="600" dy="44">主要视觉图形</tspan></text>
+
+  <!-- right auxiliary -->
+  <rect x="740" y="500" width="150" height="200" rx="6" class="soft"/>
+  <text x="815" y="570" class="text"><tspan x="815">辅助信息</tspan><tspan x="815" dy="38">比较图表</tspan><tspan x="815" dy="38">图标样本</tspan></text>
+
+  <rect x="740" y="725" width="150" height="210" rx="6" class="soft"/>
+  <text x="815" y="800" class="text"><tspan x="815">辅助信息</tspan><tspan x="815" dy="38">注释说明</tspan><tspan x="815" dy="38">数据来源</tspan></text>
+
+  <!-- footer -->
+  <rect x="310" y="965" width="580" height="105" rx="6" class="box"/>
+  <line x1="503" y1="965" x2="503" y2="1070" stroke="#111" stroke-width="2"/>
+  <line x1="697" y1="965" x2="697" y2="1070" stroke="#111" stroke-width="2"/>
+  <text x="406" y="1025" class="small">图例说明</text>
+  <text x="600" y="1025" class="small">数据来源</text>
+  <text x="794" y="1025" class="small">作品信息</text>
+
+  <!-- dimensions -->
+  <line x1="250" y1="1190" x2="950" y2="1190" stroke="#111" stroke-width="2"/>
+  <line x1="250" y1="1175" x2="250" y2="1205" stroke="#111" stroke-width="2"/>
+  <line x1="950" y1="1175" x2="950" y2="1205" stroke="#111" stroke-width="2"/>
+  <text x="600" y="1230" class="text">297 mm</text>
+
+  <line x1="1000" y1="150" x2="1000" y2="1140" stroke="#111" stroke-width="2"/>
+  <line x1="985" y1="150" x2="1015" y2="150" stroke="#111" stroke-width="2"/>
+  <line x1="985" y1="1140" x2="1015" y2="1140" stroke="#111" stroke-width="2"/>
+  <text x="1060" y="650" class="text" transform="rotate(90 1060 650)">420 mm</text>
+
+  <!-- reading sequence -->
+  <text x="600" y="1320" class="head">版面阅读顺序</text>
+  <rect x="120" y="1370" width="210" height="100" rx="8" class="soft"/>
+  <text x="225" y="1432" class="text">① 标题与导读</text>
+  <line x1="330" y1="1420" x2="420" y2="1420" class="arrow"/>
+  <rect x="435" y="1370" width="210" height="100" rx="8" class="soft"/>
+  <text x="540" y="1432" class="text">② 主体图形</text>
+  <line x1="645" y1="1420" x2="735" y2="1420" class="arrow"/>
+  <rect x="750" y="1370" width="210" height="100" rx="8" class="soft"/>
+  <text x="855" y="1432" class="text">③ 辅助信息</text>
+
+  <text x="600" y="1550" class="text">版式原则：竖版统一、主体突出、两侧辅助、分区清楚</text>
+  <text x="600" y="1620" class="note">来源：作者根据系列作品版式整理</text>
+</svg>
