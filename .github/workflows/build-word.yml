@@ -9,4 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: echo building
+      - run: python word_revision/build_docx.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: revised-word
+          path: word_revision/output/revised.docx
