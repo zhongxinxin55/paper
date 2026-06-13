@@ -4,6 +4,9 @@ on:
   push:
     paths:
       - 'word_revision/**'
+  pull_request:
+    paths:
+      - 'word_revision/**'
 jobs:
   build:
     runs-on: ubuntu-latest
