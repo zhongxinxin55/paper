@@ -106,17 +106,131 @@
     .nav-links a:hover { color: var(--red); }
 
     .hero {
+      position: relative;
       min-height: calc(100vh - 64px);
       display: grid;
       align-items: end;
       background:
-        linear-gradient(90deg, rgba(15, 12, 8, .78), rgba(15, 12, 8, .38), rgba(15, 12, 8, .12)),
-        url("信息图作品/地理.jpg") center / cover no-repeat;
+        radial-gradient(circle at 76% 28%, rgba(182, 131, 46, .34), transparent 30%),
+        radial-gradient(circle at 18% 78%, rgba(31, 111, 106, .28), transparent 34%),
+        linear-gradient(110deg, #241711 0%, #38241b 46%, #7e3329 100%);
       color: #fff;
-      animation: heroDrift 18s ease-in-out infinite alternate;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255, 232, 191, .1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 232, 191, .1) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(90deg, rgba(0, 0, 0, .7), rgba(0, 0, 0, .18));
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(23, 18, 12, .9) 0%, rgba(23, 18, 12, .58) 48%, rgba(23, 18, 12, .16) 100%);
+      pointer-events: none;
+    }
+
+    .hero-visual {
+      position: absolute;
+      right: min(5vw, 64px);
+      top: 50%;
+      width: min(52vw, 620px);
+      height: min(72vh, 620px);
+      transform: translateY(-50%);
+      pointer-events: none;
+      z-index: 1;
+      animation: heroFloat 9s ease-in-out infinite alternate;
+    }
+
+    .hero-panel {
+      position: absolute;
+      overflow: hidden;
+      border: 1px solid rgba(255, 232, 191, .42);
+      border-radius: 8px;
+      background: rgba(255, 250, 241, .14);
+      box-shadow: 0 26px 60px rgba(0, 0, 0, .28);
+    }
+
+    .hero-panel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      filter: saturate(1.05) contrast(.98);
+    }
+
+    .hero-panel.one {
+      width: 46%;
+      height: 58%;
+      left: 6%;
+      top: 13%;
+      transform: rotate(-6deg);
+    }
+
+    .hero-panel.two {
+      width: 42%;
+      height: 50%;
+      right: 8%;
+      top: 4%;
+      transform: rotate(5deg);
+    }
+
+    .hero-panel.three {
+      width: 38%;
+      height: 44%;
+      left: 28%;
+      bottom: 0;
+      transform: rotate(3deg);
+    }
+
+    .hero-panel.four {
+      width: 28%;
+      height: 34%;
+      left: 0;
+      bottom: 13%;
+      transform: rotate(8deg);
+    }
+
+    .hero-panel.five {
+      width: 30%;
+      height: 36%;
+      right: 0;
+      bottom: 20%;
+      transform: rotate(-8deg);
+    }
+
+    .hero-line {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      border: 1px solid rgba(255, 232, 191, .5);
+      border-radius: 50%;
+      right: 18%;
+      top: 42%;
+      z-index: 2;
+    }
+
+    .hero-line::after {
+      content: "";
+      position: absolute;
+      width: 86px;
+      height: 1px;
+      right: -72px;
+      top: 50%;
+      background: rgba(255, 232, 191, .55);
     }
 
     .hero-inner {
+      position: relative;
+      z-index: 3;
       width: min(1180px, calc(100% - 32px));
       margin: 0 auto;
       padding: 76px 0 64px;
@@ -408,36 +522,6 @@
       color: var(--muted);
     }
 
-    .source-list {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-    }
-
-    .source-list a {
-      min-height: 58px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      padding: 14px 18px;
-      border: 1px solid var(--line);
-      border-radius: 7px;
-      background: var(--panel);
-      color: var(--muted);
-      transition: transform .26s ease, border-color .26s ease, box-shadow .26s ease;
-    }
-
-    .source-list a:hover {
-      transform: translateX(6px);
-      border-color: rgba(182, 66, 50, .4);
-      box-shadow: 0 12px 26px rgba(63, 44, 23, .1);
-    }
-
-    .source-list strong {
-      color: var(--ink);
-    }
-
     footer {
       padding: 42px 0;
       color: #f7ead7;
@@ -476,9 +560,9 @@
       }
     }
 
-    @keyframes heroDrift {
-      from { background-position: center center; }
-      to { background-position: center 46%; }
+    @keyframes heroFloat {
+      from { transform: translateY(-50%) translateX(0); }
+      to { transform: translateY(-52%) translateX(-12px); }
     }
 
     @keyframes markPulse {
@@ -507,10 +591,16 @@
       .nav { align-items: flex-start; flex-direction: column; padding: 14px 0; }
       .nav-links { width: 100%; overflow-x: auto; padding-bottom: 4px; }
       .hero { min-height: 760px; }
+      .hero-visual {
+        right: -120px;
+        top: 42%;
+        width: 72vw;
+        opacity: .62;
+      }
       .section-head { grid-template-columns: 1fr; gap: 18px; }
       .metrics, .process { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .data-grid, .source-list { grid-template-columns: 1fr; }
+      .data-grid { grid-template-columns: 1fr; }
       .work { grid-template-rows: 360px auto; }
     }
 
@@ -519,6 +609,11 @@
       .metrics, .process, .gallery { grid-template-columns: 1fr; }
       .metric { min-height: 120px; }
       .work { grid-template-rows: 420px auto; }
+      .hero-visual {
+        right: -170px;
+        width: 112vw;
+        opacity: .34;
+      }
       footer .wrap { align-items: flex-start; flex-direction: column; }
     }
   </style>
@@ -536,13 +631,20 @@
         <a href="#works">信息图作品</a>
         <a href="#data">数据集</a>
         <a href="#process">设计方法</a>
-        <a href="#sources">资料来源</a>
       </div>
     </nav>
   </header>
 
   <main id="top">
     <section class="hero" aria-label="锦绣中华首屏">
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-panel one"><img src="信息图作品/地理.jpg" alt=""></div>
+        <div class="hero-panel two"><img src="信息图作品/语言.jpg" alt=""></div>
+        <div class="hero-panel three"><img src="信息图作品/饮食.jpg" alt=""></div>
+        <div class="hero-panel four"><img src="信息图作品/建筑.jpg" alt=""></div>
+        <div class="hero-panel five"><img src="信息图作品/乐器.jpg" alt=""></div>
+        <span class="hero-line"></span>
+      </div>
       <div class="hero-inner">
         <span class="eyebrow">Splendid China Infographic Design</span>
         <h1>锦绣中华信息可视化设计</h1>
@@ -674,25 +776,6 @@
       </div>
     </section>
 
-    <section id="sources">
-      <div class="wrap">
-        <div class="section-head">
-          <div>
-            <div class="kicker">Repository Sources</div>
-            <h2>仓库资料入口</h2>
-          </div>
-          <p class="lead">以下链接均指向仓库内的本地文件或文件夹，保留项目材料的可追溯关系。</p>
-        </div>
-        <div class="source-list">
-          <a href="论文/视传2026毕业设计说明书.md"><strong>毕业设计说明书</strong><span>论文</span></a>
-          <a href="论文基础大纲要求.md"><strong>论文基础大纲要求</strong><span>写作规范</span></a>
-          <a href="原始资料md文档/README.md"><strong>原始资料 Markdown</strong><span>文献整理</span></a>
-          <a href="数据集整理操作步骤报告.md"><strong>数据集整理操作步骤报告</strong><span>数据流程</span></a>
-          <a href="参考文献资料/"><strong>参考文献资料</strong><span>研究支撑</span></a>
-          <a href="markdown-llm/manifest.txt"><strong>LLM Markdown 清单</strong><span>辅助材料</span></a>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer>
@@ -707,8 +790,7 @@
       '.metric',
       '.work',
       '.data-card',
-      '.step',
-      '.source-list a'
+      '.step'
     ];
 
     const animatedItems = document.querySelectorAll(animatedSelectors.join(','));
